@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>Algoritmo A*</title>
+    <script src="/js/tabla.js"></script>
+    <script src="/js/estrella.js"></script>
+</head>
+
+<body>
+    <div id="menu">
+    <h1>Algoritmo de A*</h1>
+
+    <div id="botonesAccion">
+        <button id="buttonCol" onclick="nuevaColumna()">actualizar tabla</button>
+        <button id="botonInicio" onclick="inicio()">Establecer Inicio</button>
+        <button id="botonCasillasProhibidas" onclick = "prohibidas()">Establecer Casillas Prohibidas</button>
+        <button id="botonMeta" onclick = "meta()">Establecer Meta</button>
+        <button id="botonWayPoint" onclick = "wayPoint()">Establecer Way Point</button>
+        <button id="botonPeligro" onclick = "peligro()">Establecer celda peligrosa</button>
+        <button id="resolverAlgoritmo" onclick = "resolver()">Resolver</button>
+        
+    </div>
+    </div>
+    <div id="nuevaColumnaContainer" class="input-container" style="display: none;">
+        <input type="text" id="numFilasInput" placeholder="Número de filas">
+        <input type="text" id="numColumnasInput" placeholder="Número de columnas">
+        <button onclick="agregarColumnas()">Agregar</button>
+    </div>
+    <div id="casillaInicio" class="input-container" style="display: none;">
+        <input type="text" id="filaIni" placeholder="fila">
+        <input type="text" id="columnaIni" placeholder="columna">
+        <button onclick="marcarInicio()">Agregar inicio</button>
+    </div>
+    <div id="casillaFinal" class="input-container" style="display: none;">
+        <input type="text" id="filaFin" placeholder="fila">
+        <input type="text" id="columnaFin" placeholder="columna">
+        <button onclick="marcarFinal()">Agregar meta</button>
+    </div>
+    <div id="casillaProhibida" class="input-container" style="display: none;">
+        <input type="text" id="filaP" placeholder="fila">
+        <input type="text" id="columnaP" placeholder="columna">
+        <button onclick="marcarProhibida()">Agregar prohibida</button>
+    </div>
+    <div id="wayPoint" class="input-container" style="display: none;">
+        <input type="text" id="filaW" placeholder="fila">
+        <input type="text" id="columnaW" placeholder="columna">
+        <button onclick="marcarWayPoint()">Agregar way point</button>
+    </div>
+    <div id="peligro" class="input-container" style="display: none;">
+        <input type="text" id="filaPeligrosa" placeholder="fila">
+        <input type="text" id="columnaPeligrosa" placeholder="columna">
+        <button onclick="marcarPeligro()">Agregar Casilla Peligrosa</button>
+    </div>
+    <div id="mensajeError" class="mensaje-error" style="display: none;"></div>
+    <div id="contenidoPrincipal">
+        <div id="info">
+            <!-- Contenido del sidebar aquí -->
+            <div id="categorias">
+                <span class="descripcion">Inicio: </span>
+                <div id = "foto"><img src="/img/nano.jpeg" alt="Inicio" width="30" height="30"></div>
+            </div>
+            <div id="categorias">
+                <span class="descripcion">Meta: </span>
+                <div id = "foto"><img src="/img/trofeo.jpeg" alt="Meta" width="30" height="30"></div>
+            </div>
+            <div id="categorias">
+                <span class="descripcion">Obstáculos: </span>
+                <div id = "foto"><img src="/img/hamilton.jpeg" alt="Obstáculo" width="30" height="30"></div>
+                <div id = "foto"><img src="/img/ocon.jpeg" alt="Obstáculo" width="30" height="30"></div>
+                <div id = "foto"><img src="/img/verstappen.jpeg" alt="Obstáculo" width="30" height="30"></div>
+            </div>
+        </div>
+        <div id="tabla-container">
+            <!-- Contenedor de la tabla aquí -->
+            <table id="tabla">
+                <!-- Aquí se generarán las filas y columnas dinámicamente -->
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

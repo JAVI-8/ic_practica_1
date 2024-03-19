@@ -1,0 +1,122 @@
+td {
+    width: 5vw;
+    height: 6vh;
+}  
+h1 {
+    text-align: center;
+    color: black;
+}
+.table-bordered>:not(caption)>*>* {
+    border-width: 5 var(--bs-border-width);
+}
+body {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: #c4c8cd;
+}
+
+h1 {
+    text-align: center;
+}
+
+#botonesAccion {
+    /* Estilos para centrar el menú */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 3%;
+   
+}
+#menu{
+    background-color: #216125;
+    width: 100%;
+    border-radius: 5px;
+}
+#tabla {
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+#tabla th, #tabla td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #040000;
+    text-align: center;
+}
+
+.filatitulo {
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+
+.mensaje-error {
+    background-color: rgba(255, 0, 0, 0.7); /* Color de fondo semi-transparente */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Estilos para los cuadros de texto */
+.input-container {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.input-container input {
+    margin-left: 5px;
+    padding: 5px;
+}
+
+#contenedor {
+    display: flex; /* Cambiado a flex para manejar el layout del sidebar y la tabla */
+    flex-direction: row; /* Organiza los hijos de contenedor en fila */
+}
+
+#contenidoPrincipal {
+    margin-top: 3%;
+    display: flex;
+    width: 100%;
+}
+
+#info {
+    width: 20%; /* O un ancho fijo, por ejemplo, 200px */
+    min-width: 150px;
+    /*background-color: #c4c8cd;*/
+    background-color: #216125;
+    border-radius: 5px;
+    /* Ajusta el alto y otros estilos como necesites */
+}
+
+#tabla-container {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    /* Ajusta la alineación y estilos de la tabla como necesites */
+}
+
+
+.descripcion {
+    background-color: #007bff;
+    padding: 5px;
+    border-radius: 5px;
+}
+button {
+    background-color: #007bff;
+    color: black;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #0056b3;
+}
+#categorias{
+    text-align: center;
+    margin-top: 10%;
+}
+#foto{
+    margin-top: 10%;
+}
+#foto img{
+    width: 50px;
+    height: 50px;
+}
